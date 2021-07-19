@@ -1,0 +1,12 @@
+<% ejemplos = %w[Prueba Hola Botella] %>
+<h1>Pregunta al entrenador</h1>
+
+<form action="/answer" method="get">
+  <input type="text" name="pregunta" placeholder="Pregunta algo">
+  <input type="submit">
+</form>
+
+<p><a href="/answer?pregunta=<%= ejemplos.sample %>">Palabra del día</a> </p>
+
+<hr>
+<a href="javascript:history.back()">Regresar</a>
